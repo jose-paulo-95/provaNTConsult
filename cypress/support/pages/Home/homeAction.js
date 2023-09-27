@@ -48,22 +48,19 @@ export class validaRetornoEmOrdemDeDatas {
       });
 
       const datesArray = dateTexts.map((dateText) => {
-        
-        const momentDate = moment(dateText, "DD-MM-YYYY"); 
-        
+        const momentDate = moment(dateText, "DD-MM-YYYY");
+
         return momentDate.toDate();
       });
-
       datesArray.forEach((date, index) => {
         cy.log(`Data ${index + 1}: ${date.toDateString()}`);
       });
-     
+
       function assertDatesEmOrdemDecrescente(datesArray) {
         for (let i = 0; i < datesArray.length - 1; i++) {
           const currentDate = datesArray[i];
           const nextDate = datesArray[i + 1];
 
-          
           if (!(currentDate > nextDate)) {
             throw new Error(
               `Datas não estão em ordem decrescente: ${currentDate} não é maior que ${nextDate}`
@@ -75,7 +72,7 @@ export class validaRetornoEmOrdemDeDatas {
         assertDatesEmOrdemDecrescente(datesArray);
         cy.log("Todas as datas estão em ordem decrescente.");
       } catch (error) {
-        cy.log(error.message); 
+        cy.log(error.message);
       }
     });
   }

@@ -19,5 +19,8 @@
   "homepage": "https://github.com/jose-paulo-95/provaNTConsult#readme",
   "devDependencies": {
     "cypress": "^13.2.0"
+  },
+  "dependencies": {
+    "moment": "^2.29.4"
   }
 }

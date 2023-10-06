@@ -10,5 +10,6 @@ export const ELEMENTS = {
     botaoEnviarPesquisaDesktop: '.desktop-search .search-submit',
     rotuloResultado: 'header h1 span',
     listaDeArtigos: '.site-content article',
-    tituloSemResultado: '.entry-title'
+    tituloSemResultado: '.entry-title',
+    dataNoticia: '.entry-date'
 }

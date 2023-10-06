@@ -37,7 +37,7 @@ export class validaRetornoEmOrdemDeDatas {
   }
 
   validarResultadoComAsDatasEmOrdem() {
-    cy.get(".entry-date").then((dates) => {
+    cy.get(ELEMENTS.dataNoticia).then((dates) => {
       const dateTexts = [];
 
       dates.each((index, date) => {
